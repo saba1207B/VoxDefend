@@ -1,0 +1,7 @@
+{
+  "name": "VocalShield AI - Real-Time Voice Clone & Impersonation Defense",
+  "description": "AI-powered real-time detection and prevention framework for voice cloning and synthetic speech impersonation attacks across telephony, VoIP, and banking channels.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

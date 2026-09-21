@@ -1,0 +1,772 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R] /Count 3 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 6 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> >>
+endobj
+6 0 obj
+<< /Length 5170 >>
+stream
+0.05 0.12 0.25 rg
+45 702 522 55 re f
+BT
+/F2 18 Tf
+1 1 1 rg
+60 725 Td
+(VOCALSHIELD AI - ENTERPRISE DEFENSE PLATFORM) Tj
+ET
+BT
+/F1 9.5 Tf
+0.8 0.9 1 rg
+60 710 Td
+(Real-Time Voice Cloning Detection & Enterprise Impersonation Defense | SIH 2026 PS-26104) Tj
+ET
+0.2 0.3 0.4 rg
+0.7 0.75 0.8 RG
+1 w
+45 674 m 567 674 l S
+BT
+/F2 13 Tf
+0.05 0.2 0.4 rg
+45 658 Td
+(1. EXECUTIVE OVERVIEW) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+45 640 Td
+(VocalShield AI is an enterprise-grade Security Operations Center \(SOC\) defense system) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+45 627 Td
+(engineered to detect and neutralize synthetic speech deepfakes, AI voice clones, and) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+45 614 Td
+(executive impersonation attacks in real time across enterprise VoIP, PBX, and banking) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+45 601 Td
+(telephony channels.) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+45 588 Td
+(Operating with sub-45ms DSP latency, VocalShield decouples Voice Authenticity \(Is the) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+45 575 Td
+(speech synthetic or biological?\) from Speaker Identity \(Does it match the claimed) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+45 562 Td
+(authorized executive?\), defeating both AI Voice Clones and Human Impostors before) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+45 549 Td
+(fraudulent financial authorizations can execute.) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 536 Td
+(" Problem Statement: Smart India Hackathon \(SIH 2026\) | PS-26104) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 523 Td
+(" Domain: Telephony Cybersecurity, Core Banking & Treasury Fraud Defense) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 510 Td
+(" Target Channels: Enterprise VoIP, SIP PBX, Contact Centers, Mobile Banking Trunks) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 497 Td
+(" Compliance: DPDP Act 2023 | CERT-In Guidelines | Zero Raw Audio Retention) Tj
+ET
+0.2 0.3 0.4 rg
+0.7 0.75 0.8 RG
+1 w
+45 470 m 567 470 l S
+BT
+/F2 13 Tf
+0.05 0.2 0.4 rg
+45 454 Td
+(2. CORE DEFENSE ENGINE & MULTI-SIGNAL MATHEMATICAL FUSION) Tj
+ET
+BT
+/F2 10 Tf
+0.15 0.35 0.55 rg
+45 436 Td
+(7-Signal Mathematical & Acoustic Fusion Matrix) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+45 422 Td
+(VocalShield evaluates 7 independent mathematical and acoustic signals to produce a) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+45 409 Td
+(unified, tamper-evident Risk Index \(0 - 100\):) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 396 Td
+(1. Synthetic Speech Probability: Detects phase smearing, non-linear distortion, and) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 383 Td
+(mathematical artifacts characteristic of modern neural vocoders \(HiFi-GAN, WaveGlow,) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 370 Td
+(" Diffusion\).) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 357 Td
+(2. Speaker Identity Biometric Match: Computes cosine similarity between real-time) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 344 Td
+(" 192-dimensional d-vectors and pre-enrolled authorized executive voiceprints.) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 331 Td
+(3. Neural Vocoder Artifact Detection: Evaluates high-frequency spectral) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 318 Td
+(" discontinuities and phase incoherence in the >7.8 kHz acoustic band.) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 305 Td
+(4. Spectral Anomaly Analysis: Identifies unnatural brickwall roll-offs, frequency) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 292 Td
+(" truncation, and spectral voids produced by generative AI audio pipelines.) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 279 Td
+(5. Prosody Consistency & Pitch Micro-Tremor: Measures F0 glottal jitter. Biological) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 266 Td
+(human vocal folds exhibit natural micro-tremor \(0.5% - 1.5%\), whereas synthetic TTS) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 253 Td
+(" models display robotic pitch stability \(<0.2%\).) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 240 Td
+(6. Loudspeaker Replay & Transducer Analysis: Evaluates Total Harmonic Distortion) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 227 Td
+(\(THD\) and room impulse response echo tails to identify acoustic presentation attacks) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 214 Td
+(" \(replaying audio through speakers\).) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 201 Td
+(7. Biological Voice Authenticity Score: Assesses natural vocal tract formants \(F1-F4\)) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 188 Td
+(" and organic breathing pause rhythms unique to biological humans.) Tj
+ET
+0.2 0.3 0.4 rg
+0.7 0.75 0.8 RG
+1 w
+45 161 m 567 161 l S
+BT
+/F2 13 Tf
+0.05 0.2 0.4 rg
+45 145 Td
+(3. DUAL-VERIFICATION MATRIX & ARCHITECTURE) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+45 127 Td
+(Traditional voice biometrics fail against AI clones because a high-quality clone matches) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+45 114 Td
+(the speaker's vocal characteristics. VocalShield separates Authenticity from Identity:) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 101 Td
+(Legitimate Executive: Genuine Authenticity \(98%\) + Matched Identity \(96%\) -> Allow /) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 88 Td
+(" Green) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 75 Td
+(Human Impostor Attack: Genuine Authenticity \(97%\) + Mismatched Identity \(12%\) ->) Tj
+ET
+BT
+/F1 8 Tf
+0.5 0.5 0.5 rg
+507 25 Td
+(Page 1 of 3) Tj
+ET
+
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 8 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> >>
+endobj
+8 0 obj
+<< /Length 4730 >>
+stream
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 747 Td
+(" Alert & Freeze) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 734 Td
+(AI Executive Clone Attack: Fake Authenticity \(94%\) + Matched Identity \(92%\) ->) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 721 Td
+(" Critical Interlock & Banking Freeze) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 708 Td
+(Automated Voicebot Attack: Fake Authenticity \(99%\) + Mismatched Identity \(8%\) ->) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 695 Td
+(" Immediate Trunk Drop) Tj
+ET
+0.2 0.3 0.4 rg
+0.7 0.75 0.8 RG
+1 w
+45 668 m 567 668 l S
+BT
+/F2 13 Tf
+0.05 0.2 0.4 rg
+45 652 Td
+(4. REAL-TIME SOC & TELEPHONY SURVEILLANCE MODULES) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 634 Td
+(Executive SOC Dashboard & Live Threat Radar: Situational awareness dashboard with) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 621 Td
+(active call counters, threat distribution charts, real-time risk gauges, and) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 608 Td
+(" prioritized alert feeds \(Verified, Suspicious, High Risk, Critical Spoof\).) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 595 Td
+(Real-Time Telephony Call Monitor: Active call surveillance designed for SIP/VoIP) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 582 Td
+(enterprise PBX networks with caller ID spoofing detection \(detecting mismatched) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 569 Td
+(" carrier metadata vs. caller\).) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 556 Td
+(Live Call HUD: Heads-Up Display featuring real-time audio waveforms, dynamic risk) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 543 Td
+(" gauges, and synchronized transcription with flagged high-risk keywords.) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 530 Td
+(Continuous In-Call Voice Authentication: Rolling-window biometric verification) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 517 Td
+(" throughout ongoing calls to detect mid-call speaker switching or voice hijacking.) Tj
+ET
+0.2 0.3 0.4 rg
+0.7 0.75 0.8 RG
+1 w
+45 490 m 567 490 l S
+BT
+/F2 13 Tf
+0.05 0.2 0.4 rg
+45 474 Td
+(5. AUDIO DSP LAB & DEEP FORENSICS) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 456 Td
+(Live Microphone Lab: In-browser Web Audio API DSP probe with sub-45ms latency,) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 443 Td
+(" 256-bin FFT spectrum visualizer, oscilloscope, and SNR metering.) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 430 Td
+(Deep Audio Forensics File Upload: Drag-and-drop batch or single file analysis \(.wav,) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 417 Td
+(" .mp3, .m4a, .flac\) with synchronized timeline playback scrubber.) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 404 Td
+(Granular Parameter Inspection: Detailed breakdown of jitter, shimmer, formant) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 391 Td
+(" stability, spectral centroid, and transducer anomalies.) Tj
+ET
+0.2 0.3 0.4 rg
+0.7 0.75 0.8 RG
+1 w
+45 364 m 567 364 l S
+BT
+/F2 13 Tf
+0.05 0.2 0.4 rg
+45 348 Td
+(6. CROSS-CALL THREAT INTELLIGENCE & ATTACKER CLUSTERING) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 330 Td
+(Acoustic Centroid Clustering: Matches voice attack signatures across multiple) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 317 Td
+(" unrelated phone numbers and spoofed caller IDs using acoustic embedding distances.) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 304 Td
+(Syndicate & Campaign Tracking: Identifies coordinated syndicate operations targeting) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 291 Td
+(" corporate treasuries across multiple branches or departments.) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 278 Td
+(Attacker Profile Dossiers: Aggregates historical attack attempts, associated phone) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 265 Td
+(" numbers, targeted executives, and vocoder signatures.) Tj
+ET
+0.2 0.3 0.4 rg
+0.7 0.75 0.8 RG
+1 w
+45 238 m 567 238 l S
+BT
+/F2 13 Tf
+0.05 0.2 0.4 rg
+45 222 Td
+(7. AUTOMATED DEFENSE INTERLOCKS & ADAPTIVE POLICIES) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 204 Td
+(Core Banking Freeze: Automatically halts RTGS, NEFT, and SWIFT transaction approvals) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 191 Td
+(" when a high-confidence voice clone is detected.) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 178 Td
+(Out-of-Band \(OOB\) PSTN Callback: Enforces secondary telephone/PSTN verification prior) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 165 Td
+(" to high-value transaction releases.) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 152 Td
+(SIP Quarantine: Drops or isolates compromised telephony trunks from reaching) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 139 Td
+(" executive extensions.) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 126 Td
+(Dynamic Risk Thresholds: Stricter policies automatically applied based on financial) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 113 Td
+(" transaction amounts \(>INR 10 Lakhs\) and threat tiers.) Tj
+ET
+BT
+/F1 8 Tf
+0.5 0.5 0.5 rg
+507 25 Td
+(Page 2 of 3) Tj
+ET
+
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 10 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> >>
+endobj
+10 0 obj
+<< /Length 3422 >>
+stream
+0.2 0.3 0.4 rg
+0.7 0.75 0.8 RG
+1 w
+45 739 m 567 739 l S
+BT
+/F2 13 Tf
+0.05 0.2 0.4 rg
+45 723 Td
+(8. BIOMETRIC DIRECTORY & INDIAN LANGUAGE PROSODY NORMALIZATION) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 705 Td
+(Trusted Voices Biometric Directory: Secure voiceprint enrollment for enterprise) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 692 Td
+(executives, CFOs, and treasury officers with cryptographic SHA-256 signatures and) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 679 Td
+(" drift tracking.) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 666 Td
+(Indian Language Prosody Normalization: Calibrated across 8 Indian languages \(Hindi,) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 653 Td
+(English, Tamil, Telugu, Kannada, Bengali, Marathi, Malayalam\) to eliminate false) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 640 Td
+(positives caused by regional dialect cadences, syllable-timed phrasing, and native) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 627 Td
+(" intonations.) Tj
+ET
+0.2 0.3 0.4 rg
+0.7 0.75 0.8 RG
+1 w
+45 600 m 567 600 l S
+BT
+/F2 13 Tf
+0.05 0.2 0.4 rg
+45 584 Td
+(9. COMPLIANCE, CRYPTOGRAPHIC AUDIT LEDGER & AI REASONING) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 566 Td
+(Tamper-Proof SHA-256 Audit Ledger: Chained block ledger architecture ensuring) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 553 Td
+(non-repudiation for legal and forensic evidence with built-in one-click integrity) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 540 Td
+(" verification.) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 527 Td
+(Zero Raw Audio Retention: Audio buffers are discarded from RAM immediately after) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 514 Td
+(feature extraction; only cryptographic hashes are stored. Compliant with India's DPDP) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 501 Td
+(" Act 2023.) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 488 Td
+(Human-in-the-Loop Analyst Triage: Dedicated SOC Analyst Review Console for incident) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 475 Td
+(" management, case notes, ticket escalation, and false-positive calibration feedback.) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 462 Td
+(Google Gemini 3.8 Flash Forensic Reasoning: Integrated LLM reasoning engine providing) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 449 Td
+(human-readable forensic audit reports explaining acoustic anomalies and recommended) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 436 Td
+(" mitigation steps in natural language.) Tj
+ET
+0.2 0.3 0.4 rg
+0.7 0.75 0.8 RG
+1 w
+45 409 m 567 409 l S
+BT
+/F2 13 Tf
+0.05 0.2 0.4 rg
+45 393 Td
+(10. SIH 2026 DEMO SCENARIOS & DEVELOPER SDK) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 375 Td
+(" Scenario 1: Clean Human Call \(Legitimate CFO high-value verification\)) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 362 Td
+(" Scenario 2: Diffusion Voice Clone \(High-risk RTGS fraud attempt\)) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 349 Td
+(" Scenario 3: Robotic TTS Voicebot Attack \(Automated social engineering bot\)) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 336 Td
+(" Scenario 4: Voice Conversion Impersonation \(Attacker mimicking CEO pitch\)) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 323 Td
+(Enterprise Developer SDK & REST API Playground: Built-in API explorer with live) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 310 Td
+(endpoint testing for /api/v1/voice/verify, /api/v1/telephony/stream, and) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.18 rg
+60 297 Td
+(" /api/v1/ledger/audit with curl and Python code snippets.) Tj
+ET
+BT
+/F1 8 Tf
+0.5 0.5 0.5 rg
+507 25 Td
+(Page 3 of 3) Tj
+ET
+
+endstream
+endobj
+xref
+0 11
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000127 00000 n 
+0000000197 00000 n 
+0000000272 00000 n 
+0000000408 00000 n 
+0000005630 00000 n 
+0000005766 00000 n 
+0000010548 00000 n 
+0000010685 00000 n 
+trailer
+<< /Size 11 /Root 1 0 R >>
+startxref
+14160
+%%EOF

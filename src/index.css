@@ -1,0 +1,217 @@
+@import "tailwindcss";
+
+@theme {
+  --color-noir-bg: #09090B;
+  --color-noir-card: #131316;
+  --color-noir-surface: #17171C;
+  --color-noir-border: rgba(255, 255, 255, 0.08);
+  --color-gold-start: #D4A84B;
+  --color-gold-mid: #F3D081;
+  --color-gold-end: #B88E36;
+
+  /* Typography */
+  --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Bricolage Grotesque', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+:root {
+  --font-heading: 'Bricolage Grotesque', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --color-noir-bg: #09090B;
+  --color-gold-gradient: linear-gradient(135deg, #D4A84B 0%, #F3D081 50%, #B88E36 100%);
+  --gold-shadow: 0 0 25px rgba(212, 168, 75, 0.3);
+  --glass-bg: rgba(19, 19, 22, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.08);
+}
+
+body {
+  background-color: #09090B;
+  color: #D4D4D8;
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+/* Custom Gold Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #09090B;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 9999px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D4A84B;
+  box-shadow: 0 0 10px rgba(212, 168, 75, 0.5);
+}
+
+/* Typography defaults */
+h1, h2, h3, h4, .font-heading {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  letter-spacing: -0.025em; /* tracking-tight */
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+/* 3-Stop Gold Gradient Utilities */
+.gold-gradient {
+  background: linear-gradient(135deg, #D4A84B 0%, #F3D081 50%, #B88E36 100%);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #D4A84B 0%, #F3D081 50%, #B88E36 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border {
+  border: 1px solid rgba(212, 168, 75, 0.25);
+}
+
+.gold-glow {
+  box-shadow: 0 0 25px rgba(212, 168, 75, 0.3);
+}
+
+.gold-glow-lg {
+  box-shadow: 0 0 35px rgba(212, 168, 75, 0.4), 0 0 10px rgba(243, 208, 129, 0.3);
+}
+
+.gold-glow-inset {
+  box-shadow: inset 0 0 20px rgba(212, 168, 75, 0.15), 0 0 25px rgba(212, 168, 75, 0.25);
+}
+
+/* Glassmorphism Specs (rgba(19, 19, 22, 0.7) + 12px blur + 1px border rgba(255,255,255,0.08)) */
+.glass-panel, .glass-card {
+  background-color: rgba(19, 19, 22, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-panel:hover, .glass-card:hover {
+  border-color: rgba(212, 168, 75, 0.25);
+}
+
+.glass-btn {
+  background-color: rgba(19, 19, 22, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-btn:hover {
+  box-shadow: 0 0 20px rgba(212, 168, 75, 0.25);
+  border-color: rgba(212, 168, 75, 0.45);
+  color: #ffffff;
+}
+
+/* Status Pulse Badge Spec */
+.status-pulse-badge {
+  background: rgba(212, 168, 75, 0.1);
+  border: 1px solid rgba(212, 168, 75, 0.3);
+  border-radius: 9999px;
+}
+
+.status-pulse-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #F3D081;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #D4A84B;
+  animation: pulse-dot 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+    box-shadow: 0 0 8px #D4A84B;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.5;
+    box-shadow: 0 0 16px #F3D081, 0 0 24px rgba(212, 168, 75, 0.4);
+  }
+}
+
+/* Interactive transition timing standard */
+.interactive-transition {
+  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Marquee Animation */
+@keyframes marquee-infinite {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee-infinite 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Concentric Generative Circles */
+@keyframes spin-cw-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes spin-ccw-medium {
+  0% { transform: rotate(360deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes spin-cw-fast {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.spin-slow {
+  animation: spin-cw-slow 35s linear infinite;
+}
+
+.spin-medium {
+  animation: spin-ccw-medium 22s linear infinite;
+}
+
+.spin-fast {
+  animation: spin-cw-fast 14s linear infinite;
+}
+
+@keyframes pulse-critical-border {
+  0%, 100% {
+    border-color: rgba(239, 68, 68, 0.4);
+    box-shadow: 0 0 0 1px rgba(239, 68, 68, 0.3), 0 0 25px -3px rgba(239, 68, 68, 0.25);
+  }
+  50% {
+    border-color: rgba(239, 68, 68, 1);
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.65), 0 0 45px 6px rgba(239, 68, 68, 0.5);
+  }
+}
+
+.animate-pulse-critical {
+  animation: pulse-critical-border 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}

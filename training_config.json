@@ -1,0 +1,230 @@
+{
+  "config_version": "1.0",
+  "task": {
+    "name": "Speech Presentation Attack Detection (Anti-Spoofing)",
+    "classification_type": "Binary (Bona Fide vs Spoofed / Synthetic)",
+    "problem_statement": "AI-Powered Real-Time Detection and Prevention of Voice Cloning Impersonation Attacks"
+  },
+  "dataset_identity": {
+    "name": "ASVspoof 2019: The 3rd Automatic Speaker Verification Spoofing and Countermeasures Challenge database",
+    "partition": "Logical Access (LA)",
+    "repository": "University of Edinburgh DataShare",
+    "handle": "https://datashare.ed.ac.uk/handle/10283/3336",
+    "doi": "10.7488/ds/2555",
+    "doi_url": "https://doi.org/10.7488/ds/2555",
+    "license": "Open Data Commons Attribution License (ODC-By v1.0)",
+    "license_url": "https://opendatacommons.org/licenses/by/1.0/",
+    "provenance_note": "Official ASVspoof 2019 challenge database. Zenodo DOI 10.5281/zenodo.4835108 corresponds to ASVspoof 2021 and is explicitly NOT used."
+  },
+  "feature_configuration": {
+    "sample_rate": 16000,
+    "duration_seconds": 3.0,
+    "n_samples": 48000,
+    "n_fft": 512,
+    "win_length": 400,
+    "hop_length": 160,
+    "n_mels": 80,
+    "f_min": 20.0,
+    "f_max": 8000.0,
+    "center": true,
+    "pad_mode": "reflect",
+    "power": 2.0,
+    "norm": "slaney",
+    "mel_scale": "slaney",
+    "expected_tensor_shape": [
+      "batch_size",
+      1,
+      80,
+      301
+    ],
+    "shape_mathematical_derivation": "center=True pads n_fft//2 (256) on both sides -> effective_length = 48000 + 512 = 48512. frames = floor((48512 - 512) / 160) + 1 = 300 + 1 = 301. Result is exactly [B, 1, 80, 301]. Silent reshaping is strictly prohibited."
+  },
+  "model_architecture": {
+    "name": "Light-CNN-9 (LCNN-9)",
+    "activation": "Max-Feature-Map (MFM)",
+    "input_channels": 1,
+    "conv_blocks": [
+      {
+        "type": "Conv2D_MFM",
+        "in_channels": 1,
+        "out_channels": 16,
+        "kernel_size": 5,
+        "stride": 1,
+        "padding": 2,
+        "pool": 2
+      },
+      {
+        "type": "Conv2D_MFM",
+        "in_channels": 16,
+        "out_channels": 24,
+        "kernel_size": 3,
+        "stride": 1,
+        "padding": 1,
+        "pool": 2
+      },
+      {
+        "type": "Conv2D_MFM",
+        "in_channels": 24,
+        "out_channels": 32,
+        "kernel_size": 3,
+        "stride": 1,
+        "padding": 1,
+        "pool": 2
+      },
+      {
+        "type": "Conv2D_MFM",
+        "in_channels": 32,
+        "out_channels": 16,
+        "kernel_size": 1,
+        "stride": 1,
+        "padding": 0
+      },
+      {
+        "type": "Conv2D_MFM",
+        "in_channels": 16,
+        "out_channels": 32,
+        "kernel_size": 3,
+        "stride": 1,
+        "padding": 1,
+        "pool": 2
+      }
+    ],
+    "fc_blocks": [
+      {
+        "type": "Linear_MFM",
+        "in_features": "flatten",
+        "out_features": 32
+      },
+      {
+        "type": "Dropout",
+        "p": 0.5
+      },
+      {
+        "type": "Linear",
+        "in_features": 32,
+        "out_features": 1,
+        "description": "Raw unscaled logit output"
+      }
+    ],
+    "estimated_parameters": 1240000,
+    "export_target": "ONNX Opset 17"
+  },
+  "training_hyperparameters": {
+    "random_seed": 42,
+    "batch_size": 32,
+    "epochs": 30,
+    "learning_rate": 0.0001,
+    "weight_decay": 0.0001,
+    "optimizer": "AdamW",
+    "lr_scheduler": {
+      "type": "CosineAnnealingLR",
+      "T_max": 30,
+      "eta_min": 1e-06
+    },
+    "loss_function": {
+      "type": "BCEWithLogitsLoss",
+      "pos_weight_strategy": "Empirical N_spoof / N_bonafide from dataset manifest (~8.84) to balance gradients"
+    },
+    "early_stopping": {
+      "metric": "val_eer",
+      "mode": "min",
+      "patience": 7,
+      "min_delta": 0.0005
+    }
+  },
+  "augmentation_discipline": {
+    "train_partition": {
+      "allow_stochastic_augmentation": true,
+      "augmentations": [
+        {
+          "name": "SpecAugment",
+          "freq_mask_max_bins": 8,
+          "freq_mask_num": 2,
+          "time_mask_max_frames": 20,
+          "time_mask_num": 2
+        },
+        {
+          "name": "TelecomCodecSimulation",
+          "codec": "G.711 mu-law quantization",
+          "downsample_rate": 8000,
+          "p": 0.4
+        },
+        {
+          "name": "AdditiveAcousticNoise",
+          "snr_db_min": 10.0,
+          "snr_db_max": 30.0,
+          "p": 0.3
+        },
+        {
+          "name": "VolumeGainJitter",
+          "min_gain_db": -6.0,
+          "max_gain_db": 6.0,
+          "p": 0.5
+        }
+      ]
+    },
+    "validation_partition": {
+      "allow_stochastic_augmentation": false,
+      "rule": "Validation / calibration data MUST NEVER receive stochastic augmentation."
+    },
+    "evaluation_partition": {
+      "allow_stochastic_augmentation": false,
+      "rule": "Evaluation data MUST NEVER receive stochastic augmentation. Final evaluation partition remains strictly frozen until model and calibration are finalized."
+    }
+  },
+  "error_definitions_and_calibration": {
+    "far_apcer": {
+      "acronym": "FAR / APCER",
+      "formal_name": "False Acceptance Rate / Attack Presentation Classification Error Rate",
+      "definition": "Proportion of SPOOF / SYNTHETIC presentations incorrectly classified as BONA FIDE (human). Attacker successfully passes through.",
+      "formula": "FP / (FP + TN) where Positive=Spoof, Negative=BonaFide (or Spoof_Accepted / Total_Spoof)"
+    },
+    "frr_bpcer": {
+      "acronym": "FRR / BPCER",
+      "formal_name": "False Rejection Rate / Bona Fide Presentation Classification Error Rate",
+      "definition": "Proportion of BONA FIDE / HUMAN presentations incorrectly classified as SPOOF / SYNTHETIC. Legitimate user is falsely rejected.",
+      "formula": "FN / (TP + FN) where Positive=Spoof, Negative=BonaFide (or BonaFide_Rejected / Total_BonaFide)"
+    },
+    "eer_definition": "Equal Error Rate (EER): The operational threshold theta_EER where FAR(theta) == FRR(theta).",
+    "calibration_protocol": {
+      "dataset": "Held-out Development (Dev) partition exclusively (zero overlap with Train).",
+      "method": "Platt Scaling (logistic regression over raw logits: P(spoof) = 1 / (1 + exp(-(w*z + b))))",
+      "threshold_selection_rule": "Thresholds MUST be empirically determined from the calibration curve. Arbitrary values (such as 0.25 or 0.75) are strictly prohibited.",
+      "empirical_zones": [
+        "Bona Fide / Human: [0, theta_human] where FAR <= target_far (e.g. 1.0%)",
+        "Uncertain: (theta_human, theta_synthetic) triggering step-up authentication",
+        "Synthetic / Spoof: [theta_synthetic, 1.0] where FRR <= target_frr"
+      ]
+    }
+  },
+  "evaluation_protocol": {
+    "metrics": [
+      "Equal Error Rate (EER)",
+      "Area Under ROC Curve (ROC-AUC)",
+      "Precision at Calibrated Threshold",
+      "Recall at Calibrated Threshold",
+      "F1-Score at Calibrated Threshold",
+      "Confusion Matrix (TP, TN, FP, FN)"
+    ],
+    "disaggregated_reporting": {
+      "by_system": [
+        "Known spoof systems (A01 - A06)",
+        "Unseen spoof systems (A07 - A19)"
+      ],
+      "by_channel_condition": [
+        "Clean studio speech",
+        "Degraded / telephony channel speech"
+      ]
+    }
+  },
+  "acoustic_replay_separation": {
+    "status": "Decoupled Subsystem",
+    "label": "Acoustic Replay Signal",
+    "method": "2nd-order Biquad Bandpass Filter (fc=3.2 kHz, Q=1.4) measuring 2.4-4.0 kHz transducer resonance",
+    "disclaimer": "The acoustic replay detector is an acoustic transducer signal detector, not a universal replay classifier. Replay detection is evaluated independently from synthetic voice detection."
+  },
+  "voice_cloning_distinction": {
+    "anti_spoofing_scope": "Detects whether speech is synthetic / cloned vs organic human. Does NOT identify the speaker identity.",
+    "speaker_verification_scope": "Determines whether the voice belongs to a specific enrolled person (e.g. CFO). Requires a separate biometric model (e.g. ECAPA-TDNN) if identity matching is needed."
+  }
+}

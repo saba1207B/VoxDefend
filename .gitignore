@@ -1,0 +1,72 @@
+# Dependencies & Environments
+node_modules/
+.venv/
+venv/
+env/
+ENV/
+.env.local
+.env.*.local
+.env
+.env.*
+!.env.example
+
+# Python Caches & Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Build & Distribution Artifacts
+dist/
+build/
+coverage/
+out/
+
+# Checkpoints & Large Model Weights (NEVER commit raw weights or checkpoints)
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.onnx
+*.safetensors
+
+# Datasets and Raw Audio (NEVER commit audio files or raw datasets)
+*.flac
+*.wav
+*.mp3
+*.m4a
+*.ogg
+*.zip
+*.tar
+*.tar.gz
+*.7z
+data/asvspoof2019_la/ASVspoof2019_LA_train/
+data/asvspoof2019_la/ASVspoof2019_LA_dev/
+data/asvspoof2019_la/ASVspoof2019_LA_eval/
+data/asvspoof2019_la/*.zip
+data/asvspoof2019_la/*.flac
+data/asvspoof2019_la/*.wav
+datasets/
+
+# Logs & Temporary Files
+logs/
+runs/
+outputs/
+artifacts/
+*.log
+scratch/
+temp/
+tmp/
+
+# OS & IDE Files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
