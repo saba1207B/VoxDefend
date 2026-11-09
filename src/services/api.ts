@@ -1,3 +1,15 @@
+/*
+Copyright (c) 2026 Sabareesh M (saba1207B). All Rights Reserved.
+
+This source code is proprietary and confidential.
+
+Unauthorized copying, redistribution, modification, or use — including
+any use for artificial intelligence / machine learning training —
+is strictly prohibited.
+
+See the LICENSE and COPYRIGHT files in the repository root for full terms.
+*/
+
 /**
  * Voice Shield - Centralized API Service Layer
  * Consumes local Express backend endpoints with graceful fallback to mock data
